@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+  </head>
+
+  <body class="bg-[#0D0D0D] text-[#f9f6f6] overflow-hidden">
+
+
+    <div class="loading-screen z-[999] flex min-h-screen fixed top-0 start-0 end-0 bottom-0 bg-black justify-center items-center">
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+    <div class="side-nav-menu z-[99] min-h-screen fixed flex top-0">
+      
+      <div class="nav-tab bg-[#0D0D0D] flex flex-col justify-between min-h-screen p-5">
+        <div class="links">
+          <ul class="list-unstyled overflow-hidden">
+            <li onclick="showSearchInputs(); closeSideNav()" class="py-3 relative cursor-pointer">Search</li>
+            <li onclick="getAllCategories(); closeSideNav()" class="py-3 relative cursor-pointer">Categories</li>
+            <li onclick="getAreas(); closeSideNav()" class="py-3 relative cursor-pointer">Area</li>
+            <li onclick="getIngredients(); closeSideNav()" class="py-3 relative cursor-pointer">Ingredients</li>
+            <li onclick="showContacts(); closeSideNav()" class="py-3 relative cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright Â© 2024 All Rights <br>Reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-header flex flex-col justify-between py-5 text-center px-2 bg-white text-black">
+        <a href=""><img class="logo w-[50px]" src="img/logo.png" alt="Yummy"></a>
+        <i class="open-close-icon fa-solid fa-align-justify fa-2x"></i>
+        <div class="flex flex-col">
+          <i class="fa-solid fa-globe mb-1"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="container w-[75%] mx-auto" id="searchContainer">
+
+    </div>
+
+
+    <div class="container w-[85%] mx-auto">
+      <div class="row py-5" id="rowData">
+
+      </div>
+  </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
